@@ -7,8 +7,8 @@ Jupyter Notebook files (`ipynb`) can be run using [JupyterNotebook/JupyterLab](h
 
 ## Contents
 
-- `Basics.ipynb` contains the *Python Basics learned from* [this](https://www.youtube.com/watch?v=K5KVEU3aaeQ&ab_channel=ProgrammingwithMosh) *link*
-- `index.html` contains the *HTML tags and basics learned from* [this](https://www.youtube.com/watch?v=FQdaUv95mR8&ab_channel=KevinStratvert) *link*
+- `Basics(<name>).ipynb` contains the *Python Basics learned from* [this](https://www.youtube.com/watch?v=K5KVEU3aaeQ&ab_channel=ProgrammingwithMosh) *link*
+- `index(<name>).html` contains the *HTML tags and basics learned from* [this](https://www.youtube.com/watch?v=FQdaUv95mR8&ab_channel=KevinStratvert) *link*
 
 ### Git Basics Learned
 
