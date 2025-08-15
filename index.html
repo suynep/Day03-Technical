@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: auto;
+        padding: 1em;
+      }
+      code,
+      pre {
+        background: #f5f5f5;
+        padding: 0.5em;
+        border-radius: 4px;
+        display: block;
+      }
+      h1,
+      h2,
+      h3 {
+        margin-top: 1.5em;
+      }
+    </style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Basics</title>
+  </head>
+
+  <body>
+
+    <header class="site">
+      <h1>HTML Basics</h1>
+      <p>
+        In the journey of learning core HTML concepts with short explanations,
+        examples, and runnable snippets.
+      </p>
+    </header>
+
+    <main>
+      <nav class="toc" aria-label="Table of contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#create-file">Create HTML file</a></li>
+          <li><a href="#edit-file">Edit HTML file</a></li>
+          <li><a href="#declarative">Declarative language</a></li>
+          <li><a href="#header">Header element</a></li>
+          <li><a href="#paragraph">Paragraph element</a></li>
+          <li><a href="#inline-nested">In line &amp; nested elements</a></li>
+          <li><a href="#markup">Markup language</a></li>
+          <li><a href="#section-indent">Section element and indentation</a></li>
+          <li><a href="#ul">Unordered list</a></li>
+          <li><a href="#ol">Ordered list</a></li>
+          <li><a href="#br">Line breaks</a></li>
+          <li><a href="#comments">Comments</a></li>
+          <li><a href="#links">Links and anchor</a></li>
+          <li><a href="#images">Images</a></li>
+          <li><a href="#media">Audio and video</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#structure">Structure HTML page</a></li>
+        </ol>
+      </nav>
+
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p class="helper">
+          HTML (HyperText Markup Language) structures content on the web. 
+        </p>
+        <pre><code>&lt;!-- An HTML document contains elements (tags) that describe structure and meaning --&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;strong&gt;This text is important.&lt;/strong&gt;</code></pre>
+      </section>
+
+      <section id="create-file">
+        <h2>Create HTML file</h2>
+        <p class="helper">
+          Create a new file named <code>index.html</code> and add the minimal
+          boilerplate.
+        </p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Hello, world!
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <div class="demo">
+          Open the file in a browser (double-click or use a local server). The
+          doctype helps browsers use standards-compliant rendering.
+        </div>
+      </section>
+
+      <section id="edit-file">
+        <h2>Edit HTML file</h2>
+        <p class="helper">
+          Use any text editor (VS Code, Sublime, Vim, Notepad). Save with a
+          <code>.html</code> extension and refresh the browser to see changes.
+        </p>
+        <pre><code>&lt;!-- Change the page title and body text, then hit refresh --&gt;
+&lt;title&gt;Edited Page&lt;/title&gt;
+&lt;body&gt;Now with updated content.&lt;/body&gt;</code></pre>
+      </section>
+
+      <section id="declarative">
+        <h2>Declarative language</h2>
+        <p class="helper">
+          HTML is declarative: you declare <em>what</em> elements are, not
+          <em>how</em> to render them step-by-step.
+        </p>
+        <pre><code>&lt;article&gt;
+  &lt;h1&gt;A Declarative Document&lt;/h1&gt;
+  &lt;p&gt;Browsers decide visual details while following standards.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+      </section>
+
+      <section id="header">
+        <h2>Header element</h2>
+        <p class="helper">
+          Use <code>&lt;header&gt;</code> for introductory content of a page or
+          section. It can include logos, headings, and nav.
+        </p>
+        <pre><code>&lt;header&gt;
+  &lt;h1&gt;Site Title&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#intro"&gt;Intro&lt;/a&gt;
+    &lt;a href="#structure"&gt;Structure&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+      </section>
+
+      <section id="paragraph">
+        <h2>Paragraph element</h2>
+        <p class="helper">
+          Paragraphs wrap blocks of text. Browsers add spacing above/below by
+          default.
+        </p>
+        <pre><code>&lt;p&gt;Each paragraph communicates one idea clearly.&lt;/p&gt;
+&lt;p&gt;Use multiple paragraphs for readability.&lt;/p&gt;</code></pre>
+      </section>
+
+      <section id="inline-nested">
+        <h2>In line &amp; nested elements</h2>
+        <p class="helper">
+          <strong>Inline</strong> elements flow within text (e.g.,
+          <code>&lt;em&gt;</code>, <code>&lt;a&gt;</code>), while
+          <strong>block</strong> elements (e.g., <code>&lt;p&gt;</code>,
+          <code>&lt;section&gt;</code>) start on a new line. Elements can be
+          nested.
+        </p>
+        <pre><code>&lt;p&gt;This is a &lt;em&gt;nested&lt;/em&gt; &lt;strong&gt;inline&lt;/strong&gt; example with a &lt;a href="#"&gt;link&lt;/a&gt;.&lt;/p&gt;</code></pre>
+      </section>
+
+      <section id="markup">
+        <h2>Markup language</h2>
+        <p class="helper">
+          HTML is a markup language: tags annotate content to give it structure
+          and meaning.
+        </p>
+        <pre><code>&lt;blockquote cite="https://example.com"&gt;
+  &lt;p&gt;“Semantics matter for accessibility and SEO.”&lt;/p&gt;
+  &lt;cite&gt;— Someone on the Web&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
+      </section>
+
+      <section id="section-indent">
+        <h2>Section element and indentation</h2>
+        <p class="helper">
+          Use <code>&lt;section&gt;</code> for standalone thematic groups.
+          Proper indentation improves readability.
+        </p>
+        <pre><code>&lt;section&gt;
+  &lt;h2&gt;Features&lt;/h2&gt;
+  &lt;p&gt;Short description.&lt;/p&gt;
+  &lt;section&gt;
+    &lt;h3&gt;Sub-feature&lt;/h3&gt;
+    &lt;p&gt;Nested section content.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+
+      <section id="ul">
+        <h2>Unordered list</h2>
+        <p class="helper">
+          Use <code>&lt;ul&gt;</code> with <code>&lt;li&gt;</code> for bullet
+          lists where order doesn’t matter.
+        </p>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      </section>
+
+      <section id="ol">
+        <h2>Ordered list</h2>
+        <p class="helper">
+          Use <code>&lt;ol&gt;</code> when sequence matters. We can change
+          numbering with the <code>start</code> attribute.
+        </p>
+        <pre><code>&lt;ol start="3"&gt;
+  &lt;li&gt;Plan&lt;/li&gt;
+  &lt;li&gt;Build&lt;/li&gt;
+  &lt;li&gt;Ship&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </section>
+
+      <section id="br">
+        <h2>Line breaks</h2>
+        <p class="helper">
+          Use <code>&lt;br&gt;</code> for a line break inside a block of text.
+          Prefer paragraphs for separate thoughts.
+        </p>
+        <pre><code>&lt;p&gt;Address Line 1&lt;br&gt;Address Line 2&lt;/p&gt;</code></pre>
+      </section>
+
+      <section id="comments">
+        <h2>Comments</h2>
+        <p class="helper">
+          Comments don’t render in the page but help document your code.
+        </p>
+        <pre><code>&lt;!-- TODO: Replace placeholder image before launch --&gt;
+&lt;img src="placeholder.png" alt="Placeholder"&gt;</code></pre>
+      </section>
+
+      <section id="links">
+        <h2>Links and anchor</h2>
+        <p class="helper">
+          Use <code>&lt;a&gt;</code> for hyperlinks. Add
+          <code>target="_blank"</code> + <code>rel="noopener"</code> for safe
+          new-tab links. Anchors can jump to IDs.
+        </p>
+        <pre><code>&lt;a href="https://developer.mozilla.org/" target="_blank" rel="noopener"&gt;MDN Web Docs&lt;/a&gt;
+&lt;a href="#intro"&gt;Back to Introduction (anchor)&lt;/a&gt;</code></pre>
+      </section>
+
+      <section id="images">
+        <h2>Images</h2>
+        <p class="helper">
+          Include descriptive <code>alt</code> text for accessibility and better
+          loading behavior with <code>width</code>/<code>height</code>.
+        </p>
+        <pre><code>&lt;img src="cat.jpg" alt="A gray cat looking at the camera" width="320" height="200"&gt;</code></pre>
+        <pre><code>&lt;picture&gt;
+  &lt;source srcset="cat.avif" type="image/avif"&gt;
+  &lt;source srcset="cat.webp" type="image/webp"&gt;
+  &lt;img src="cat.jpg" alt="A gray cat" width="320" height="200"&gt;
+&lt;/picture&gt;</code></pre>
+      </section>
+
+      <section id="media">
+        <h2>Audio and video</h2>
+        <p class="helper">
+          Use built-in media players with controls and captions for
+          accessibility.
+        </p>
+        <pre><code>&lt;audio controls&gt;
+  &lt;source src="sound.ogg" type="audio/ogg"&gt;
+  &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;video controls width="400" poster="thumb.jpg"&gt;
+  &lt;source src="clip.webm" type="video/webm"&gt;
+  &lt;source src="clip.mp4" type="video/mp4"&gt;
+  &lt;track kind="captions" src="captions.vtt" srclang="en" label="English"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;</code></pre>
+      </section>
+
+      <section id="tables">
+        <h2>Tables</h2>
+        <p class="helper">
+          Tables are for tabular data. Use <code>&lt;thead&gt;</code>,
+          <code>&lt;tbody&gt;</code>, and scope attributes for accessibility.
+        </p>
+        <pre><code>&lt;table&gt;
+  &lt;caption&gt;Quarterly Revenue&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Quarter&lt;/th&gt;
+      &lt;th scope="col"&gt;Amount&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;th scope="row"&gt;Q1&lt;/th&gt;&lt;td&gt;$10k&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th scope="row"&gt;Q2&lt;/th&gt;&lt;td&gt;$14k&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </section>
+
+      <section id="forms">
+        <h2>Forms</h2>
+        <p class="helper">
+          Forms collect user input. Always associate
+          <code>&lt;label&gt;</code> with inputs for accessibility.
+        </p>
+        <pre><code>&lt;form action="/subscribe" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Newsletter&lt;/legend&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input id="email" name="email" type="email" placeholder="you@example.com" required&gt;
+    &lt;button type="submit"&gt;Subscribe&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+      </section>
+
+      <section id="structure">
+        <h2>Structure HTML page</h2>
+        <p class="helper">
+          A semantic layout improves readability, accessibility, and SEO. Here
+          we have a common skeleton.
+        </p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Semantic Structure&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;...branding &amp; nav...&lt;/header&gt;
+  &lt;main&gt;
+    &lt;article&gt;...primary content...&lt;/article&gt;
+    &lt;aside&gt;...related info...&lt;/aside&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;...copyright &amp; links...&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </section>
+    </main>
+  </body>
+</html>
