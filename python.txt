@@ -1,0 +1,25 @@
+->Strings
+->Escape Sequences
+->Formatted Strings
+->String Methods
+->Numbers
+->Working With Numbers
+->Type Conversion
+->Comparison Operators
+->Conditional Statements
+->Ternary Operator
+->Logical Operators
+->Short-circuit Evaluations
+->Chaining Comparison Operators
+->For Loops
+->For..Else
+->Nested Loops
+->Iterables
+->While Loops
+->Infinite Loops
+->Defining Functions
+->Arguments
+->Types of Functions
+->Keyword Arguments
+->Default Arguments
+->xargs
